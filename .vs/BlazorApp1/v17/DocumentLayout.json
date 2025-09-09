@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\controllers\\alojamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\controllers\\alojamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\services\\alojamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\services\\alojamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\repositories\\alojamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\repositories\\alojamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\repositories\\ialojamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\repositories\\ialojamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\ander\\source\\repos\\blazorapp1\\blazorapp1\\services\\ialojamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70E76268-9EB2-4B2E-816D-DC5248822F9B}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\services\\ialojamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAlojamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Repositories\\IAlojamRepository.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Repositories\\IAlojamRepository.cs",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Repositories\\IAlojamRepository.cs",
+              "RelativeToolTip": "BlazorApp1\\Repositories\\IAlojamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:01:25.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAABcBAAAAAAAAAAAkwCoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-31T16:39:43.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAlojamientoService.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Services\\IAlojamientoService.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Services\\IAlojamientoService.cs",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Services\\IAlojamientoService.cs",
+              "RelativeToolTip": "BlazorApp1\\Services\\IAlojamientoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:25:46.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AlojamRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Repositories\\AlojamRepository.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Repositories\\AlojamRepository.cs",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Repositories\\AlojamRepository.cs",
+              "RelativeToolTip": "BlazorApp1\\Repositories\\AlojamRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T20:00:28.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlojamientoService.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Services\\AlojamientoService.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Services\\AlojamientoService.cs",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Services\\AlojamientoService.cs",
+              "RelativeToolTip": "BlazorApp1\\Services\\AlojamientoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T19:52:07.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlojamController.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Controllers\\AlojamController.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Controllers\\AlojamController.cs",
+              "ToolTip": "C:\\Users\\ander\\source\\repos\\BlazorApp1\\BlazorApp1\\Controllers\\AlojamController.cs",
+              "RelativeToolTip": "BlazorApp1\\Controllers\\AlojamController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T19:45:01.834Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

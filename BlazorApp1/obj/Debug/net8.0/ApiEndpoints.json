@@ -1,0 +1,32 @@
+[
+  {
+    "ContainingType": "BlazorApp1.Controllers.AlojamController",
+    "Method": "getAllAlojam",
+    "RelativePath": "api/Alojam",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BlazorApp1.DATA.Alojam, BlazorApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlazorApp1.Controllers.AlojamController",
+    "Method": "test",
+    "RelativePath": "api/Alojam/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

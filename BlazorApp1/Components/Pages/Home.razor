@@ -1,0 +1,298 @@
+﻿@page "/"
+@using BlazorApp1.DATA
+@rendermode InteractiveServer
+@inject HttpClient httpClient
+
+
+<PageTitle>Alojamientos</PageTitle>
+
+<h1>Lista de Alojamientos</h1>
+
+
+<button class="btn btn-primary mb-3" @onclick="ToggleFiltros">
+    @(mostrarFiltros ? "Ocultar filtros" : "Mostrar filtros")
+</button>
+
+
+@if (mostrarFiltros)
+{
+    <div class="border rounded p-3 mb-4" style="background-color:#f8f9fa;">
+
+        <h5>Tipos</h5>
+        @foreach (var tipo in tipos)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="tipo.Selected" class="form-check-input" />
+                <label class="form-check-label">@tipo.Nombre</label>
+            </div>
+        }
+
+      
+        <h5>Provincias</h5>
+        @foreach (var prov in provincias)
+{
+        <div class="form-check">
+                <input type="checkbox" @bind="prov.Selected" @bind:after="() => GetAlojProvincia(prov)" class="form-check-input" />
+            <label class="form-check-label">@prov.Nombre</label>
+        </div>
+}
+
+
+        <h5>Ubicación</h5>
+        @foreach (var ubic in ubicaciones)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="ubic.Selected" class="form-check-input" />
+                <label class="form-check-label">@ubic.Nombre</label>
+            </div>
+        }
+
+       
+        <h5>Precios</h5>
+        @foreach (var precio in precios)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="precio.Selected" class="form-check-input" />
+                <label class="form-check-label">@precio.Nombre</label>
+            </div>
+        }
+
+       
+        <h5>Comidas</h5>
+        @foreach (var comida in comidas)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="comida.Selected" class="form-check-input" />
+                <label class="form-check-label">@comida.Nombre</label>
+            </div>
+        }
+
+        <h5>Servicios generales</h5>
+        @foreach (var serv in serviciosGenerales)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="serv.Selected" class="form-check-input" />
+                <label class="form-check-label">@serv.Nombre</label>
+            </div>
+        }
+
+        
+        <h5>Servicios habitación / Apartamento</h5>
+        @foreach (var servHab in serviciosHabitacion)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="servHab.Selected" class="form-check-input" />
+                <label class="form-check-label">@servHab.Nombre</label>
+            </div>
+        }
+
+        
+        <h5>Familias / Niños</h5>
+        @foreach (var fam in familiasNinos)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="fam.Selected" class="form-check-input" />
+                <label class="form-check-label">@fam.Nombre</label>
+            </div>
+        }
+
+        
+        <h5>Reuniones / Empresas</h5>
+        @foreach (var reunion in reunionesEmpresas)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="reunion.Selected" class="form-check-input" />
+                <label class="form-check-label">@reunion.Nombre</label>
+            </div>
+        }
+
+        
+        <h5>Experiencias y Otros</h5>
+        @foreach (var exp in experienciasOtros)
+        {
+            <div class="form-check">
+                <input type="checkbox" @bind="exp.Selected" class="form-check-input" />
+                <label class="form-check-label">@exp.Nombre</label>
+            </div>
+        }
+
+    </div>
+}
+
+
+@if (alojamientos == null)
+{
+    <p><em>Cargando alojamientos...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var alojam in alojamientos)
+        {
+            <li><strong>ID:</strong> @alojam.IdAlojamiento | <strong>Nombre:</strong> @alojam.AloNombre</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Alojam>? alojamientos;
+    private bool mostrarFiltros = false;
+
+
+    public class Filtro
+    {
+        public string Nombre { get; set; } = string.Empty;
+        public bool Selected { get; set; }
+        public int THCod { get; set; }
+    }
+
+
+    private List<Filtro> tipos = new()
+    {
+        new Filtro { Nombre = "Habitación" },
+        new Filtro { Nombre = "Apartamento" },
+        new Filtro { Nombre = "Casa entera / Grupos" }
+    };
+
+    private List<Filtro> provincias = new()
+{
+    new Filtro { Nombre = "Álava/Araba", THCod = 1 },
+    new Filtro { Nombre = "Bizkaia", THCod = 48 },
+    new Filtro { Nombre = "Gipuzkoa", THCod = 20 }
+};
+
+    private List<Filtro> ubicaciones = new()
+    {
+        new Filtro { Nombre = "Núcleo urbano" },
+        new Filtro { Nombre = "Fuera de núcleo urbano" },
+        new Filtro { Nombre = "Cercano a transporte público" },
+        new Filtro { Nombre = "En montaña" },
+        new Filtro { Nombre = "En costa / cerca de playa" },
+        new Filtro { Nombre = "En parque natural" }
+    };
+
+    private List<Filtro> precios = new()
+    {
+        new Filtro { Nombre = "Hasta 60€" },
+        new Filtro { Nombre = "60 - 100 €" },
+        new Filtro { Nombre = "100 - 150 €" },
+        new Filtro { Nombre = "150 - 200 €" },
+        new Filtro { Nombre = "Más de 200" }
+    };
+
+    private List<Filtro> comidas = new()
+    {
+        new Filtro { Nombre = "Desayuno" },
+        new Filtro { Nombre = "Comida" },
+        new Filtro { Nombre = "Cena" },
+        new Filtro { Nombre = "Uso de cocina" }
+    };
+
+    private List<Filtro> serviciosGenerales = new()
+    {
+        new Filtro { Nombre = "Sala de estar" },
+        new Filtro { Nombre = "Wifi" },
+        new Filtro { Nombre = "Admite mascotas" },
+        new Filtro { Nombre = "Dentro del alojamiento" },
+        new Filtro { Nombre = "Fuera del alojamiento" },
+        new Filtro { Nombre = "Chimenea / Fuego bajo" },
+        new Filtro { Nombre = "Jardín" },
+        new Filtro { Nombre = "Mobiliario de jardín" },
+        new Filtro { Nombre = "Porche" },
+        new Filtro { Nombre = "Terraza" },
+        new Filtro { Nombre = "Acondicionado movilidad reducida" },
+        new Filtro { Nombre = "Barbacoa" },
+        new Filtro { Nombre = "Spa" },
+        new Filtro { Nombre = "Piscina" },
+        new Filtro { Nombre = "Punto de recarga de coches eléctricos" }
+    };
+
+    private List<Filtro> serviciosHabitacion = new()
+    {
+        new Filtro { Nombre = "Baño en interior" },
+        new Filtro { Nombre = "Bañera" },
+        new Filtro { Nombre = "Bañera hidromasaje" },
+        new Filtro { Nombre = "Ducha" },
+        new Filtro { Nombre = "Ducha hidromasaje" }
+    };
+
+    private List<Filtro> familiasNinos = new()
+    {
+        new Filtro { Nombre = "Sala de juegos" },
+        new Filtro { Nombre = "Parque de juegos exterior" },
+        new Filtro { Nombre = "Servicio de Guardería" },
+        new Filtro { Nombre = "Actividades para niños" },
+        new Filtro { Nombre = "Dispone de animales" }
+    };
+
+    private List<Filtro> reunionesEmpresas = new()
+    {
+        new Filtro { Nombre = "Sala de reuniones" },
+        new Filtro { Nombre = "Conexión internet" },
+        new Filtro { Nombre = "Pizarra" },
+        new Filtro { Nombre = "Retroproyector" },
+        new Filtro { Nombre = "Pantalla de proyección" },
+        new Filtro { Nombre = "Video proyector" }
+    };
+
+    private List<Filtro> experienciasOtros = new()
+    {
+        new Filtro { Nombre = "Ofrece actividades" },
+        new Filtro { Nombre = "Bienestar" },
+        new Filtro { Nombre = "Enología" },
+        new Filtro { Nombre = "Agropecuarias" },
+        new Filtro { Nombre = "Talleres" },
+        new Filtro { Nombre = "Naturalísticas" },
+        new Filtro { Nombre = "Romántica" },
+        new Filtro { Nombre = "Permite participar en actividades agropecuarias" },
+        new Filtro { Nombre = "Venta de productos" }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetAllAlojam();
+    }
+
+    private async Task GetAllAlojam()
+    {
+
+
+        try
+        {
+            alojamientos = await httpClient.GetFromJsonAsync<List<Alojam>>("api/Alojam");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al obtener alojamientos: {ex.Message}");
+        }
+    }
+    private async Task GetAlojProvincia(Filtro prov)
+    {
+        if (prov.Selected)
+        {
+            // Llamamos al controlador pasando el ThCod
+            try
+            {
+                alojamientos = await httpClient.GetFromJsonAsync<List<Alojam>>($"api/Alojam/provincia/{prov.THCod}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener alojamientos de {prov.Nombre}: {ex.Message}");
+            }
+        }
+        else
+        {
+            await GetAllAlojam();
+        }
+
+        StateHasChanged();
+
+    }
+
+
+    private void ToggleFiltros()
+    {
+        mostrarFiltros = !mostrarFiltros;
+        StateHasChanged();
+    }
+}
