@@ -48,5 +48,19 @@ namespace BlazorApp1.Repositories
             return new List<Alojam>();
         }
 
+        public async Task<List<Alojam>> GetByAnimals(bool dog)
+        {
+            if (dog)
+            {
+                return await _context.alojam
+                    .Where(c => c.dog == dog)
+                    .ToListAsync();
+            }
+            else
+            {
+                return new List<Alojam>();
+            }
+        }
+
     }
 }

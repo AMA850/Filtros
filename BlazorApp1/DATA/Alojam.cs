@@ -17,5 +17,8 @@ namespace BlazorApp1.DATA
 
         [Column("ComCod")]
         public int ComCod { get; set; }
+
+        [Column("DogFriendly")]
+        public bool dog { get; set; };
     }
 }

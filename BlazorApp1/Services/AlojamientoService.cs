@@ -49,5 +49,32 @@ namespace BlazorApp1.Services
                 return new List<Alojam>();
             }
         }
+        public async Task<List<Alojam>> getAlojComarca(int comCod)
+        {
+            try
+            {
+                var response = await _alojamRepository.GetByComarca(comCod);
+                return response ?? new List<Alojam>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en getAlojComarca: {ex.Message}");
+                return new List<Alojam>();
+            }
+        }
+
+        public async Task<List<Alojam>> getAlojByAnimals(bool dog)
+        {
+            try
+            {
+                var response = await _alojamRepository.GetByAnimals(dog);
+                return response ?? new List<Alojam>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en getAlojByAnimals: {ex.Message}");
+                return new List<Alojam>();
+            }
+        }
     }
 }
