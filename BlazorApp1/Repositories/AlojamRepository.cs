@@ -26,5 +26,27 @@ namespace BlazorApp1.Repositories
                                  .ToListAsync();
         }
 
+        public async Task<List<Alojam>> GetByComarca(int ComCod)
+        {
+            if (ComCod > 0)
+            {
+                try
+                {
+                    return await _context.alojam
+                        .Where(c => c.ComCod == ComCod)
+                        .ToListAsync();
+                }
+                catch (Exception ex) {
+                    Console.Write(ex);
+                }
+            }
+            else
+            {
+                return new List<Alojam>();
+                Console.WriteLine($"lista vacia, tras error ");
+            }
+            return new List<Alojam>();
+        }
+
     }
 }

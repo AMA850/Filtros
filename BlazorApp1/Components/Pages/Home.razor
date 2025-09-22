@@ -274,6 +274,7 @@ else
             try
             {
                 alojamientos = await httpClient.GetFromJsonAsync<List<Alojam>>($"api/Alojam/provincia/{prov.THCod}");
+                Console.WriteLine($"Vemos respuesta de alojamientos por provincia", alojamientos);
             }
             catch (Exception ex)
             {

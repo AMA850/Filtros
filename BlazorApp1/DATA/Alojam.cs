@@ -14,5 +14,8 @@ namespace BlazorApp1.DATA
         public string AloNombre { get; set; }
         [Column("THCod")]
         public int THCod { get; set; }
+
+        [Column("ComCod")]
+        public int ComCod { get; set; }
     }
 }
