@@ -289,6 +289,30 @@ else
         StateHasChanged();
 
     }
+    private async Task GetAlojComarca(Filtro comCod)
+    {
+        if (comCod.Selected)
+        {
+            try
+            {
+                alojamientos = await httpClient.GetFromJsonAsync<List<Alojam>>(
+                    $"api/Alojam/comarca/{comCod.ComCod}"
+                );
+                Console.WriteLine($"Cargados alojamientos de comarca {comCod.Nombre}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener alojamientos de {comCod.Nombre}: {ex.Message}");
+            }
+        }
+        else
+        {
+            await GetAllAlojam(); 
+        }
+
+        StateHasChanged();
+    }
+
 
 
     private void ToggleFiltros()
